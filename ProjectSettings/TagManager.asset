@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Platform
   - Enemy
+  - Key
   layers:
   - Default
   - TransparentFX
@@ -40,6 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Gate
+    uniqueID: 764791741
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

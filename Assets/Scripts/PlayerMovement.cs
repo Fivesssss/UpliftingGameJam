@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private SpriteRenderer sr;
     [SerializeField] private float speed = 5f;
+    public GameObject swordLeft;
+    public GameObject swordRight;
     private Vector2 movement;
     private bool isGrounded = true;
 
@@ -51,10 +53,14 @@ public class PlayerMovement : MonoBehaviour
         if (rb.velocity.x < 0)
         {
             sr.flipX = true;
+            swordLeft.SetActive(true);
+            swordRight.SetActive(false);
         }
         else if (rb.velocity.x > 0)
         {
             sr.flipX = false;
+            swordLeft.SetActive(false);
+            swordRight.SetActive(true);
         }
     }
 }
